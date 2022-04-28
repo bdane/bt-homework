@@ -1,0 +1,2 @@
+# bt-homework
+Domaci zadaci
