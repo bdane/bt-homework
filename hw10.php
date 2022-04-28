@@ -37,7 +37,29 @@
     $d = $a + $b + $c;
     echo "Zbir brojeva $a, $b i $c je $d.";
     ?>
+    <hr>
+    <?php
+    // BONUS zadatak zbog kasnjenja
+    // (niz slucajnih brojeva bez ponavljanja)
 
+    echo "Loto brojevi:<br>";
+    $lotoNo = array();
+    for ($i = 0; $i < 7; $i++) {
+        $lotoNo[$i] = mt_rand(1, 39);
+        if ($i > 0) {
+            for ($j = $i; $j > 0; $j--) {
+                if ($lotoNo[$i] == $lotoNo[$j - 1]) {
+                    $i--;
+                }
+            }
+        }
+    }
+    sort($lotoNo);
+    for ($i = 0; $i < 7; $i++) {
+        echo $lotoNo[$i] . " | ";
+    }
+    // Meni ce biti dovoljno i 10% :D
+    ?>
 </body>
 
 </html>
