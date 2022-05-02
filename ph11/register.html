@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -86,3 +87,94 @@
     </div>
   </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hw11</title>
+    <style>
+      .container {
+        display: inline-block;
+      }
+      fieldset {
+        border-radius: 10px;
+      }
+      sup {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="register.php" method="get">
+        <fieldset>
+          <legend>Registrujte se</legend>
+          <label for="ime">Ime:<sup>*</sup></label>
+          <input
+            type="text"
+            id="ime"
+            name="ime[]"
+            placeholder="Vase ime..."
+          /><br />
+          <label for="prez">Prezime:<sup>*</sup></label>
+          <input
+            type="text"
+            id="prez"
+            name="prez[]"
+            placeholder="Vase prezime..."
+          /><br />
+          <label>Pol:<sup>*</sup></label>
+          <input type="radio" id="mus" name="pol[]" value="m" checked /><label
+            for="mus"
+            >Musko</label
+          >
+          <input type="radio" id="zen" name="pol[]" value="z" /><label for="zen"
+            >Zensko</label
+          >
+          <br />
+          <label for="email">Email:<sup>*</sup></label>
+          <input
+            type="email"
+            id="email"
+            name="email[]"
+            placeholder="Email..."
+          /><br />
+          <label for="pass">Lozinka:<sup>*</sup></label>
+          <input
+            type="password"
+            id="pass"
+            name="pass[]"
+            placeholder="Unesite lozinku..."
+          /><br />
+          <label for="pass">Ponovite lozinku:<sup>*</sup></label>
+          <input
+            type="password"
+            id="re-pass"
+            name="re-pass[]"
+            placeholder="Ponovite lozinku..."
+          /><br />
+          <label>Courses:<sup>*</sup></label>
+          <input type="checkbox" id="html" name="courses[]" checked />
+          <label for="html">HTML</label>
+          <input type="checkbox" id="css" name="courses[]" />
+          <label for="css">CSS</label>
+          <input type="checkbox" id="js" name="courses[]" />
+          <label for="js">JavaScript</label>
+          <input type="checkbox" id="php" name="courses[]" />
+          <label for="php">PHP</label>
+          <br />
+          <!-- <label for="img">Vasa slika:<sup>*</sup></label>
+          <input type="file" id="img" name="img[]" required />
+          <br /> -->
+          <button type="submit">Posalji</button>
+          <button type="reset">Obrisi</button>
+          <p><sup>*</sup> obavezna polja.</p>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
+>>>>>>> 1f8462de8c435d329fa22d43739320aea160b12e
