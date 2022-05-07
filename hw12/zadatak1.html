@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadatak 1</title>
+    <link rel="stylesheet" href="zadatak1.css" />
+  </head>
+  <body>
+    <header>
+      <h1>KALKULATOR KALORIJA</h1>
+    </header>
+    <main>
+      <form action="zadatak1.php" method="get">
+        <fieldset>
+          <legend>Kalkulator kalorija</legend>
+          <div class="form_row">
+            <label for="tezina" class="lleft">Tezina: </label>
+            <input
+              type="number"
+              id="tezina"
+              name="tezina[]"
+              placeholder="Vasa tezina u kg"
+            />
+          </div>
+          <br />
+          <div class="form_row">
+            <label for="zanimanje" class="lleft">Zanimanje: </label>
+            <select name="zanimanje[]" id="zanimanje">
+              <option value="NULL">- Odaberite zanimanje -</option>
+              <option value="Programer">Programer</option>
+              <option value="Administrativni radnik">
+                Administrativni radnik
+              </option>
+              <option value="Menadzer">Menadzer</option>
+              <option value="Policajac">Policajac</option>
+              <option value="Vojnik">Vojnik</option>
+              <option value="Sportista">Sportista</option>
+            </select>
+          </div>
+          <br />
+          <div class="form_row">
+            <label for="godine" class="lleft">Godine: </label>
+            <input
+              type="number"
+              id="godine"
+              name="godine[]"
+              placeholder="Vase godine starosti"
+            />
+          </div>
+          <br />
+          <button type="submit">OK</button>
+          <button type="reset">Reset</button>
+        </fieldset>
+      </form>
+    </main>
+    <footer>
+      <p>Copyright &copy; 2022 Branko Radojevic - All rights reserved</p>
+    </footer>
+  </body>
+</html>
