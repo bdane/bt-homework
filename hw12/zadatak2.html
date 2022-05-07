@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadatak 2</title>
+    <link rel="stylesheet" href="zadatak2.css" />
+  </head>
+  <body>
+    <header>
+      <h1>PRORACUN MATERIJALA</h1>
+    </header>
+    <main>
+      <form action="zadatak2.php" method="post">
+        <fieldset>
+          <legend>Proracun</legend>
+          <fieldset>
+            <legend>Dimenzije zida (cm)</legend>
+            <div>
+              <label for="s_zida">Sirina zida: </label>
+              <input
+                type="number"
+                id="s_zida"
+                name="s_zida[]"
+                placeholder="Unesite sirinu zida"
+              />
+            </div>
+            <br />
+            <div>
+              <label for="v_zida">Visina zida: </label>
+              <input
+                type="number"
+                id="v_zida"
+                name="v_zida[]"
+                placeholder="Unesite visinu zida"
+              />
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Dimenzije plocica (cm)</legend>
+            <div>
+              <label for="s_plo">Sirina plocice: </label>
+              <input
+                type="number"
+                id="s_plo"
+                name="s_plo[]"
+                placeholder="Unesite sirinu plocice"
+              />
+            </div>
+            <br />
+            <div>
+              <label for="d_plo">Duzina plocice: </label>
+              <input
+                type="number"
+                id="d_plo"
+                name="d_plo[]"
+                placeholder="Unesite duzinu plocice"
+              />
+            </div>
+          </fieldset>
+          <div class="div_btn">
+            <button type="submit" class="btn">OK</button>
+            <button type="reset" class="btn">Ponisti</button>
+          </div>
+        </fieldset>
+      </form>
+    </main>
+    <footer>
+      <p>Copyright &copy; 2022 Branko Radojevic - All rights reserved</p>
+    </footer>
+  </body>
+</html>
