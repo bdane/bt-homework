@@ -65,14 +65,14 @@ function brojCifara($a)
     return $b;
 }
 
-/* function februar()
+/* function februar($godina)
 {
     if (prestupnaGodina($godina)) {
-        $x = 29;
+        $februar = 29;
     } else {
-        $x = 28;
+        $februar = 28;
     }
-    return $x;
+    return $februar;
 } */
 
 function prestupnaGodina($godina) // Vraca true ako je godina prestupna
