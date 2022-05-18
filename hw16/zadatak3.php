@@ -8,26 +8,21 @@ $nekiNiz = array(
 
 function keyFinder($nekiAsNiz, $someKey)
 {
+    $temp = false;
     foreach ($nekiAsNiz as $key => $value) {
         if ($key == $someKey) {
-            return "Kljuc postoji.";
-        } else {
-            return "Kluc ne postoji";
+            $temp = true;
         }
+    }
+    if ($temp) {
+        return "<p>\"" . $someKey . "\"" . " kljuc postoji.</p>";
+    } else {
+        return "<p>\"" . $someKey . "\"" . " kljuc ne postoji.</p>";
     }
 }
 
 var_dump($nekiNiz);
-echo "<br>";
-echo keyFinder($nekiNiz, "gender");
-echo "<br>";
-echo keyFinder($nekiNiz, "age");
 
-foreach ($nekiNiz as $key => $value) {
-    echo "<br>" . $key . "<br>";
-    if ($key == "gender") {
-        echo "Kljuc postoji.";
-    } else {
-        echo "Kluc ne postoji";
-    }
-}
+echo keyFinder($nekiNiz, "gender");
+
+echo keyFinder($nekiNiz, "age");
