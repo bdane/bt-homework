@@ -22,7 +22,7 @@
         <div class="text-center">
             <a class="btn btn-outline-dark" href="./single-product-page.php?page=<?php echo $prevProduct['id']; ?>">
                 < PREV</a>
-                    <a class="btn btn-outline-dark" href="#"> - </a>
+                    <a class="btn btn-outline-dark" href="./products-page.php"> BACK </a>
                     <a class="btn btn-outline-dark" href="./single-product-page.php?page=<?php echo $nextProduct['id']; ?>">NEXT ></a>
         </div>
         <div class="row">

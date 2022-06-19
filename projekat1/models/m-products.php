@@ -61,7 +61,7 @@ function getFilteredByTitle($allProducts, $term)
     $availableProducts = GetAvailableProducts($allProducts);
     $filteredByTitle = [];
     foreach ($availableProducts as $product) {
-        if (str_contains($product['title'], $term)) {
+        if (str_contains(strtolower($product['title']), strtolower($term))) {
             $filteredByTitle[] = $product;
         }
     }
@@ -93,13 +93,45 @@ function getRelatedProducts($allProducts, $currentProduct)
     }
 }
 
+/* function sortByPrice($allProducts)
+{
+    $availableProducts = getAvailableProducts($allProducts);
+    $sortedByPrice = [];
+    $minPrice = $availableProducts[0]['price'];
+    foreach ($availableProducts as $key => $product) {
+        if ($product[$key]['price'] < $minPrice) {
+            $minPrice = $product[$key]['price'];
+        }
+    }
+} */
+
+function sortByPriceASC($allProducts)
+{
+    $availableProducts = getAvailableProducts($allProducts);
+    $sortedByPrice = [];
+    $minArray = $availableProducts[0];
+    $minPrice = $availableProducts[0]['price'];
+    for ($i = 0; $i < count($availableProducts); $i++) {
+        for ($j = $i; $j < count($availableProducts); $j++) {
+            if ($i != $j) {
+                if ($availableProducts[$i]['price'] < $minPrice) {
+                    $minPrice = $availableProducts[$i]['price'];
+                    $minArray = $availableProducts[$i];
+                }
+            }
+        }
+        $sortedByPrice[] = $minArray;
+    }
+    return $sortedByPrice;
+}
+
 $allProducts = [
     [
         'id' => 1,
         'title' => 'SAKO S1 CRNI',
         'description' => 'Mnogo lep sako. Super-ekstra kvalitet.',
         'img' => "./public/theme/img/Sako-FRENDY-crni-01.png",
-        'price' => '4200',
+        'price' => '4300',
         'category' => 'Garderoba',
         'tag' => ['prolece', 'leto'],
         'brand' => 'BRANKO',
@@ -107,9 +139,9 @@ $allProducts = [
     ],
     [
         'id' => 2,
-        'title' => 'SAKO S2 CRNI',
+        'title' => 'SAKO S2 BELI',
         'description' => 'Mnogo lep sako. Super-ekstra kvalitet.',
-        'img' => "./public/theme/img/Sako-FRENDY-crni-01.png",
+        'img' => "./public/theme/img/Sako-FRENDY-beli-01.png",
         'price' => '4200',
         'category' => 'Garderoba',
         'tag' => ['prolece', 'leto'],
@@ -118,10 +150,10 @@ $allProducts = [
     ],
     [
         'id' => 3,
-        'title' => 'SAKO S3 CRNI',
+        'title' => 'SAKO S3 ANTRACIT',
         'description' => 'Mnogo lep sako. Super-ekstra kvalitet.',
-        'img' => "./public/theme/img/Sako-FRENDY-crni-01.png",
-        'price' => '4200',
+        'img' => "./public/theme/img/Sako-FRENDY-antracit-01.png",
+        'price' => '4000',
         'category' => 'Garderoba',
         'tag' => ['prolece', 'leto'],
         'brand' => 'BRANKO',
@@ -129,10 +161,10 @@ $allProducts = [
     ],
     [
         'id' => 4,
-        'title' => 'SAKO S4 CRNI',
+        'title' => 'SAKO S4 CIKLAMA',
         'description' => 'Mnogo lep sako. Super-ekstra kvalitet.',
-        'img' => "./public/theme/img/Sako-FRENDY-crni-01.png",
-        'price' => '4200',
+        'img' => "./public/theme/img/Sako-FRENDY-ciklama-01.png",
+        'price' => '4100',
         'category' => 'Garderoba',
         'tag' => ['prolece', 'leto'],
         'brand' => 'BRANKO',
@@ -140,10 +172,10 @@ $allProducts = [
     ],
     [
         'id' => 5,
-        'title' => 'SAKO S5 CRNI',
+        'title' => 'SAKO S5 MINT',
         'description' => 'Mnogo lep sako. Super-ekstra kvalitet.',
-        'img' => "./public/theme/img/Sako-FRENDY-crni-01.png",
-        'price' => '4200',
+        'img' => "./public/theme/img/Sako-FRENDY-mint-01.png",
+        'price' => '4250',
         'category' => 'Garderoba',
         'tag' => ['prolece', 'leto'],
         'brand' => 'BRANKO',
@@ -162,10 +194,10 @@ $allProducts = [
     ],
     [
         'id' => 7,
-        'title' => 'SAKO S7 CRNI',
+        'title' => 'SAKO S7 SVETLOZELENI',
         'description' => 'Mnogo lep sako. Super-ekstra kvalitet.',
-        'img' => "./public/theme/img/Sako-FRENDY-crni-01.png",
-        'price' => '4200',
+        'img' => "./public/theme/img/Sako-FRENDY-svetlozeleni-01.png",
+        'price' => '4350',
         'category' => 'Garderoba',
         'tag' => ['prolece', 'leto'],
         'brand' => 'BRANKO',
@@ -173,10 +205,10 @@ $allProducts = [
     ],
     [
         'id' => 8,
-        'title' => 'SAKO S8 CRNI',
+        'title' => 'SAKO S8 TAMNOZELENI',
         'description' => 'Mnogo lep sako. Super-ekstra kvalitet.',
-        'img' => "./public/theme/img/Sako-FRENDY-crni-01.png",
-        'price' => '4200',
+        'img' => "./public/theme/img/Sako-FRENDY-tamnozeleni-01.png",
+        'price' => '4050',
         'category' => 'Garderoba',
         'tag' => ['prolece', 'leto'],
         'brand' => 'BRANKO',
