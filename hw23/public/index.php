@@ -6,7 +6,7 @@ if (isset($_SESSION['counter'])) {
 } else {
     $_SESSION['counter'] = 1;
 }
-setcookie('click', 'clickedButton', time() + 120, '/');
+//setcookie('click', 'clickedButton', time() + 120, '/');
 //var_dump($_SESSION);
 
 $click = false;

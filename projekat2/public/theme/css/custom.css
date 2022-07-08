@@ -1,0 +1,31 @@
+.red {
+    color: red;
+}
+
+.hero1 {
+    background-image: url('../img/Sunglass-Hero-3.jpg');
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* .overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: rgba(100, 150, 100, 0.5);
+} */
+
+#hero-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+  }

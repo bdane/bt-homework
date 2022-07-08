@@ -1,0 +1,3 @@
+<?php
+
+$headerTitle = "404";
