@@ -66,7 +66,7 @@
                                 <h5 class="card-title mb-1 text-primary"><?php echo htmlspecialchars($product['price']); ?> €</h5>
                                 <h6 class="card-title text-secondary mb-1"><?php echo htmlspecialchars($product['category']); ?></h6>
                                 <p class="card-text"><?php echo htmlspecialchars($product['description']); ?></p>
-                                <a href="#" class="btn btn-dark">View Details</a>
+                                <a href="./single-product-page.php?page=<?php echo $product['barcode']; ?>" class="btn btn-dark">View Details</a>
                                 <a href="#" class="btn btn-outline-dark">Add To Cart</a>
                             </div>
                         </div>

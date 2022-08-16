@@ -2,7 +2,7 @@
 
 include_once './database/DB.php';
 
-class Newsletter //extends DataBase
+class Newsletter
 {
     private $newsletter;
 

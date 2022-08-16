@@ -2,7 +2,7 @@
 
 include './database/DB.php';
 
-class Products extends DataBase
+class Products // extends DataBase
 {
     private $barcode;
     private $title;
